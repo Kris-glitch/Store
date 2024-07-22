@@ -1,0 +1,62 @@
+GET http://localhost:5195/jewlery
+
+###
+GET http://localhost:5195/collections
+
+###
+
+GET http://localhost:5195/categories
+
+###
+GET http://localhost:5195/jewlery/1
+
+###
+GET http://localhost:5195/collections/1
+
+###
+
+GET http://localhost:5195/categories/1
+
+###
+POST  http://localhost:5195/jewlery
+Content-Type: application/json
+
+{
+  "name": "Bridal ruby tiara",
+  "description": "Bridal tiara with Macedonian ruby stone",
+  "price": 5000,
+  "weight": 50,
+  "categoryId": 1,
+  "collectionId": 1,
+  "dateOfProduction": "2024-11-07",
+  "imageUrl": "url"
+}
+
+###
+
+POST http://localhost:5195/collections
+Content-Type: application/json
+
+{
+  "name": "Bridal Spring 2023"
+}
+
+###
+PUT http://localhost:5195/jewlery/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Macedonian red Ruby necklace",
+    "description": "Silver necklace with Macedonian Ruby stone.",
+    "price": 3000,
+    "weight": 30,
+    "categoryId": 1,
+    "collectionId": 1,
+    "dateOfProduction": "2024-07-15",
+    "imageUrl": null
+}
+
+###
+
+DELETE http://localhost:5195/jewlery/2
